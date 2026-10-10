@@ -6,6 +6,8 @@ My background is in Applied Mathematics and Computer Science. I am also studying
 
 I am based in Nizhny Novgorod, Russia, and looking for fully remote development work.
 
+[Watch the three project demos in your browser](https://ilyam-dev-source.github.io/ilyam-dev-source/)
+
 ## Selected projects
 
 ### OptBot
@@ -14,7 +16,7 @@ A B2B ordering platform for manufacturers and dealers. It covers public catalog 
 
 TypeScript · Next.js · React · Express · PostgreSQL · Redis
 
-[Case study](cases/optbot.md) · [Demo video, 76 seconds](media/optbot-demo.mp4)
+[Case study](cases/optbot.md) · [Watch demo, 76 seconds](https://ilyam-dev-source.github.io/ilyam-dev-source/#optbot)
 
 ### Nahodka
 
@@ -22,7 +24,7 @@ A lost-and-found service with map-based listings, partner organizations and mess
 
 Vue · Django REST Framework · Channels · PostgreSQL · MapLibre
 
-[Case study](cases/nahodka.md) · [Demo video, 89 seconds](media/nahodka-demo.mp4)
+[Case study](cases/nahodka.md) · [Watch demo, 89 seconds](https://ilyam-dev-source.github.io/ilyam-dev-source/#nahodka)
 
 ### CiteDraft
 
@@ -30,6 +32,6 @@ A support-reply drafting prototype. It uses Gemini to select relevant policy fac
 
 TypeScript · Next.js · Gemini · Structured outputs · Evaluation datasets
 
-[Case study](cases/citedraft.md) · [Demo video, 74 seconds](media/citedraft-demo.mp4)
+[Case study](cases/citedraft.md) · [Watch demo, 74 seconds](https://ilyam-dev-source.github.io/ilyam-dev-source/#citedraft)
 
 OptBot and CiteDraft are self-directed projects. Nahodka began as my bachelor's project and was later prepared for this portfolio. The recordings use sample data; the case studies describe the demo boundaries and engineering decisions.
