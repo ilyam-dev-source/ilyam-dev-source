@@ -4,7 +4,7 @@ A support drafting prototype that keeps the customer's question, company policy 
 
 ![Draft and source review](../media/citedraft-review.png)
 
-[Watch the local demo, 74 seconds](../media/citedraft-demo.mp4) · [Back to profile](../README.md)
+[Watch the local demo, 74 seconds](https://ilyam-dev-source.github.io/ilyam-dev-source/#citedraft) · [Download MP4](../media/citedraft-demo.mp4) · [Back to profile](../README.md)
 
 ## Workflow
 
@@ -41,4 +41,4 @@ The two remote stages use Flash-Lite only in this explicit Cloud Semantic mode. 
 
 The October 5 app-path regression retained all 48 synthetic cases. Among 47 strict cases, route correctness was 46/47 and action correctness 45/47; all 29 displayed drafts were supported under author/agent grading. Known failures and the original call-contract discrepancy are retained in the private evaluation record. This reused, authored dataset is not a fresh independent benchmark, and these numbers do not establish production accuracy.
 
-The prototype has no helpdesk connector, customer-message delivery, public live-model endpoint or real-customer validation. Public hosting is not yet available. The older static replay contains earlier-version results and is not included in this current-version package.
+The prototype has no helpdesk connector, customer-message delivery, public live-model endpoint or real-customer validation. The public portfolio page hosts the recording, not the application. The older static replay contains earlier-version results and is not included in this current-version package.

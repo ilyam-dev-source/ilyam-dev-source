@@ -4,7 +4,7 @@ A B2B ordering platform for a manufacturer's dealer network. Visitors can browse
 
 ![Dealer catalog](../media/optbot-catalog.png)
 
-[Watch the local demo, 76 seconds](../media/optbot-demo.mp4) · [Back to profile](../README.md)
+[Watch the local demo, 76 seconds](https://ilyam-dev-source.github.io/ilyam-dev-source/#optbot) · [Download MP4](../media/optbot-demo.mp4) · [Back to profile](../README.md)
 
 ## What I built
 
@@ -42,4 +42,4 @@ That record also reports no production dependency vulnerabilities or secret/SAST
 
 ## Scope
 
-Self-directed prototype, with no claimed customers, revenue or production-load results. Public hosting is not yet available. The local video demonstrates the workflow without exposing customer data.
+Self-directed prototype, with no claimed customers, revenue or production-load results. The public portfolio page hosts the recording, not the application. The local video demonstrates the workflow without exposing customer data.

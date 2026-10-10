@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ilya — Full-stack developer · Selected projects</title>
+  <meta name="description" content="Ilya's full-stack development portfolio: local video recordings and engineering case studies for OptBot, Nahodka and CiteDraft.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header page-width">
+    <a class="wordmark" href="#main" aria-label="Ilya, back to introduction">Ilya<span aria-hidden="true">.</span></a>
+    <p>Full-stack developer</p>
+    <a class="profile-link" href="https://github.com/ilyam-dev-source">GitHub profile <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="page-width" id="main" tabindex="-1">
+    <section class="introduction" aria-labelledby="intro-title">
+      <div>
+        <p class="eyebrow">Selected work / 01—03</p>
+        <h1 id="intro-title">Web products,<br>from interface to data.</h1>
+        <p class="intro-copy">I build full-stack applications with TypeScript, React/Vue, Node.js, Django and PostgreSQL. These three projects show ordering, map-based discovery and AI-assisted support drafting.</p>
+      </div>
+      <aside class="intro-aside" aria-label="Location and recording context">
+        <p>Nizhny Novgorod, Russia<br>Looking for fully remote development work.</p>
+        <p class="recording-note">These are local recordings with sample data, not live app demos. English captions are included in the videos. Use the native controls to seek or watch fullscreen.</p>
+      </aside>
+    </section>
+
+    <nav class="project-nav" aria-label="Jump to a project">
+      <span class="nav-label">Explore the projects</span>
+      <a href="#optbot"><span aria-hidden="true">01</span> OptBot</a>
+      <a href="#nahodka"><span aria-hidden="true">02</span> Nahodka</a>
+      <a href="#citedraft"><span aria-hidden="true">03</span> CiteDraft</a>
+    </nav>
+
+    <section class="project" id="optbot" aria-labelledby="optbot-title">
+      <div class="project-heading">
+        <div>
+          <p class="eyebrow">01 / Self-directed project</p>
+          <h2 id="optbot-title">OptBot</h2>
+          <p class="project-category">B2B ordering</p>
+        </div>
+        <div class="project-summary">
+          <p>A manufacturer's dealer network, in one ordering workflow: public catalog, negotiated dealer prices, cart review and supplier administration.</p>
+          <p class="stack">TypeScript · Next.js · React · Express · PostgreSQL · Redis</p>
+        </div>
+      </div>
+      <figure class="recording">
+        <video id="video-optbot" controls playsinline preload="none" poster="media/optbot-catalog.png" aria-label="OptBot local demonstration of catalog, dealer pricing and order creation" aria-describedby="optbot-caption">
+          <source src="media/optbot-demo.mp4" type="video/mp4">
+          Your browser does not support embedded video. Use the MP4 download below.
+        </video>
+        <figcaption id="optbot-caption">
+          <span>Local recording · 1 min 16 sec · English captions</span>
+          <a href="media/optbot-demo.mp4" download="optbot-demo.mp4">Download OptBot MP4</a>
+        </figcaption>
+      </figure>
+      <div class="project-details">
+        <div>
+          <h3>Engineering focus</h3>
+          <p>Application permissions and PostgreSQL row-level security enforce tenant isolation. Server-side quote verification and transactions support the order workflow.</p>
+        </div>
+        <div>
+          <h3>Recording boundary</h3>
+          <p>Catalog, sessions and order transitions run locally. External company lookup, email, KMS and ERP adapters are simulated; the confirmation is not a live ERP connection.</p>
+        </div>
+      </div>
+      <a class="case-link" href="https://github.com/ilyam-dev-source/ilyam-dev-source/blob/main/cases/optbot.md">Read the OptBot case study <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="project" id="nahodka" aria-labelledby="nahodka-title">
+      <div class="project-heading">
+        <div>
+          <p class="eyebrow">02 / Bachelor's project</p>
+          <h2 id="nahodka-title">Nahodka</h2>
+          <p class="project-category">Lost-and-found service</p>
+        </div>
+        <div class="project-summary">
+          <p>Map-based reports and found-item listings help people browse possible matches and contact the partner organization holding an item.</p>
+          <p class="stack">Vue · Django REST Framework · Channels · PostgreSQL · MapLibre</p>
+        </div>
+      </div>
+      <figure class="recording">
+        <video id="video-nahodka" controls playsinline preload="none" poster="media/nahodka-home.png" aria-label="Nahodka local demonstration of map listings, a lost-item report and partner messaging" aria-describedby="nahodka-caption">
+          <source src="media/nahodka-demo.mp4" type="video/mp4">
+          Your browser does not support embedded video. Use the MP4 download below.
+        </video>
+        <figcaption id="nahodka-caption">
+          <span>Local recording · 1 min 29 sec · English captions</span>
+          <a href="media/nahodka-demo.mp4" download="nahodka-demo.mp4">Download Nahodka MP4</a>
+        </figcaption>
+      </figure>
+      <div class="project-details">
+        <div>
+          <h3>Engineering focus</h3>
+          <p>Persistent messaging with WebSocket delivery, role-specific workspaces and server-side permissions. Listings combine category, description and location.</p>
+        </div>
+        <div>
+          <h3>Recording boundary</h3>
+          <p>The report and messaging flow uses sample accounts with local SQLite and in-memory channels, not the PostgreSQL/Redis deployment setup. A shared category is not proof of an item match.</p>
+        </div>
+      </div>
+      <a class="case-link" href="https://github.com/ilyam-dev-source/ilyam-dev-source/blob/main/cases/nahodka.md">Read the Nahodka case study <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="project" id="citedraft" aria-labelledby="citedraft-title">
+      <div class="project-heading">
+        <div>
+          <p class="eyebrow">03 / Self-directed project</p>
+          <h2 id="citedraft-title">CiteDraft</h2>
+          <p class="project-category">Support-reply drafting</p>
+        </div>
+        <div class="project-summary">
+          <p>A review workspace for the customer's question, policy sources and proposed reply. Gemini selects relevant facts; an operator edits, checks sources and approves the exact text internally.</p>
+          <p class="stack">TypeScript · Next.js · Gemini · Structured outputs · Evaluation datasets</p>
+        </div>
+      </div>
+      <figure class="recording">
+        <video id="video-citedraft" controls playsinline preload="none" poster="media/citedraft-review.png" aria-label="CiteDraft local demonstration of a support draft, source checks and internal approval" aria-describedby="citedraft-caption">
+          <source src="media/citedraft-demo.mp4" type="video/mp4">
+          Your browser does not support embedded video. Use the MP4 download below.
+        </video>
+        <figcaption id="citedraft-caption">
+          <span>Local recording · 1 min 14 sec · English captions</span>
+          <a href="media/citedraft-demo.mp4" download="citedraft-demo.mp4">Download CiteDraft MP4</a>
+        </figcaption>
+      </figure>
+      <div class="project-details">
+        <div>
+          <h3>Engineering focus</h3>
+          <p>Server-validated structured outputs select reviewed statement IDs. Edited text requires another human source check; an audit hash records the exact internally approved draft.</p>
+        </div>
+        <div>
+          <h3>Recording boundary</h3>
+          <p>A real Gemini Flash-Lite response runs in the local application's Cloud Semantic mode. The video shows internal approval, not customer-message delivery. This selected example is not an accuracy benchmark.</p>
+        </div>
+      </div>
+      <a class="case-link" href="https://github.com/ilyam-dev-source/ilyam-dev-source/blob/main/cases/citedraft.md">Read the CiteDraft case study <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="background" aria-labelledby="background-title">
+      <div>
+        <p class="eyebrow">Background &amp; approach</p>
+        <h2 id="background-title">Mathematics, software<br>and applied AI.</h2>
+      </div>
+      <div class="background-copy">
+        <h3>Education</h3>
+        <p>My background is in Applied Mathematics and Computer Science. I am studying AI in automated information processing and control systems at master's level. Nahodka began as my bachelor's project and was later prepared for this portfolio.</p>
+        <h3>Working with AI tools</h3>
+        <p>I use AI tools for research, implementation and review, then check the resulting code through tests and product workflows. The linked case studies explain each project's architecture, evidence and limitations.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer page-width">
+    <p>Ilya / Selected development projects</p>
+    <a href="https://github.com/ilyam-dev-source">View GitHub profile <span aria-hidden="true">↗</span></a>
+    <a href="#main">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</body>
+</html>
