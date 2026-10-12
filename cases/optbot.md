@@ -4,7 +4,7 @@ A B2B ordering platform for a manufacturer's dealer network. Visitors can browse
 
 ![Dealer catalog](../media/optbot-catalog.png)
 
-[Watch the local demo, 76 seconds](https://ilyam-dev-source.github.io/ilyam-dev-source/#optbot) · [Download MP4](../media/optbot-demo.mp4) · [Back to profile](../README.md)
+[Live demo](https://optbot-portfolio.vercel.app/) · [Watch the local recording, 76 seconds](https://ilyam-dev-source.github.io/ilyam-dev-source/#optbot) · [Download MP4](../media/optbot-demo.mp4) · [Back to profile](../README.md)
 
 ## What I built
 
@@ -42,4 +42,4 @@ That record also reports no production dependency vulnerabilities or secret/SAST
 
 ## Scope
 
-Self-directed prototype, with no claimed customers, revenue or production-load results. The public portfolio page hosts the recording, not the application. The local video demonstrates the workflow without exposing customer data.
+Self-directed prototype, with no claimed customers, revenue or production-load results. The live demo uses Vercel, a Render API and Neon PostgreSQL; external integrations remain simulated. Its shared sample state resets on demo sign-in. The API may take about a minute to wake after inactivity. Do not enter personal or confidential information. The video remains a local recording.
