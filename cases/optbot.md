@@ -1,6 +1,6 @@
 # OptBot
 
-A B2B ordering platform for a manufacturer's dealer network. Visitors can browse retail prices; approved dealers see their contract prices and place orders. Supplier managers have a separate workspace for dealers and payment terms.
+A B2B ordering platform for manufacturers and their dealers. Visitors can browse retail prices; approved dealers see their contract prices and place orders. Supplier managers manage dealer accounts and payment terms in a separate workspace.
 
 ![Dealer catalog](../media/optbot-catalog.png)
 
@@ -9,10 +9,10 @@ A B2B ordering platform for a manufacturer's dealer network. Visitors can browse
 ## What I built
 
 - A TypeScript monorepo with a Next.js/React web client, Express API and a webhook gateway.
-- Public catalog and cart, authenticated dealer pricing, server-side quote verification and order workflows.
-- Tenant-scoped database access with PostgreSQL FORCE RLS and application authorization.
-- Redis-backed caching/rate limits, readiness checks and graceful shutdown.
-- ERP integration boundaries, webhook validation, English/Russian localization and PWA support.
+- A public catalog and cart, dealer-specific prices, price verification before checkout and order management.
+- PostgreSQL FORCE RLS policies and application permissions to keep tenant data separate.
+- Redis caching and rate limits, readiness checks and graceful shutdown.
+- ERP adapters, webhook validation, English/Russian localization and PWA support.
 
 ## How a request moves through the system
 
@@ -26,20 +26,24 @@ flowchart LR
   Gateway[Webhook gateway] --> API
 ```
 
-The API establishes identity and tenant context before each tenant-scoped operation. Database policies enforce the tenant boundary independently of application query filters. Transactions keep order transitions and webhook deduplication consistent.
+The API sets the request's identity and tenant context inside a transaction before accessing tenant data. PostgreSQL policies enforce isolation even if an application query omits a tenant filter. Order changes and webhook deduplication commit together or roll back together.
 
 ## What the video shows
 
 Public catalog, supplier dashboard, dealer sign-in, the dealer's negotiated price, cart review, price verification, order creation and a simulated ERP confirmation.
 
-The catalog, sessions, PostgreSQL RLS and order state transitions run in the local application. External company lookup, email, KMS wrapping and ERP calls use deterministic demo adapters. The recording does not demonstrate a live ERP connection. Each demo sign-in resets the shared synthetic state and can invalidate the previous demo session.
+The catalog, sessions, PostgreSQL RLS and order changes run in the local application. Demo adapters simulate company lookup, email, KMS wrapping and ERP calls. The final confirmation comes from the simulated ERP adapter.
 
-## Engineering evidence
+## Tests and verification
 
-The recorded order flow completed on the local Docker stack on October 8, 2026, with no uncaught browser JavaScript errors. The October 5 verification record reports 193 passing tests, one skipped external ERP sandbox test and a successful production build. The recorded coverage was 75.61% statements and 82.00% lines. These figures are a dated baseline, not a new test run performed for this page.
+The October 8, 2026 recording completed the order flow on the local Docker stack without uncaught browser JavaScript errors. The October 12 CI run passed 228 tests; the external ERP sandbox test was skipped because it requires credentials.
 
-That record also reports no production dependency vulnerabilities or secret/SAST findings. Four High findings remained in development-only ESLint dependencies. Live ERP verification requires sandbox credentials; the local demo does not satisfy that external gate.
+Earlier local checks on October 5 passed 193 tests and the production build, with 75.61% statement coverage and 82.00% line coverage. That run reported no known production dependency vulnerabilities, secret leaks or static-analysis findings. Four High findings remained in development-only ESLint dependencies. These coverage and scan results belong to the October 5 run.
 
-## Scope
+The demo does not test a live ERP connection. That requires a separate run with sandbox credentials.
 
-Self-directed prototype, with no claimed customers, revenue or production-load results. The live demo uses Vercel, a Render API and Neon PostgreSQL; external integrations remain simulated. Its shared sample state resets on demo sign-in. The API may take about a minute to wake after inactivity. Do not enter personal or confidential information. The video remains a local recording.
+## Live demo and limitations
+
+OptBot is a self-directed prototype. It has not been validated with customers or under production load, and no revenue is claimed.
+
+The live demo uses Vercel, a Render API and Neon PostgreSQL. External integrations are simulated. Visitors share the same sample data; signing in does not reset orders or end another visitor's session. The API may take about a minute to wake after inactivity. Do not enter personal or confidential information. The video above was recorded locally.
