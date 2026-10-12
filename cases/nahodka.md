@@ -1,6 +1,6 @@
 # Nahodka
 
-A lost-and-found service for individuals and partner organizations. Listings combine category, description and location; users can inspect found items and contact the organization holding them.
+A lost-and-found service for individuals and partner organizations. People publish lost-item reports, browse found items by category and location, and contact the organization holding a possible match.
 
 ![Map-based home page](../media/nahodka-home.png)
 
@@ -25,18 +25,20 @@ flowchart LR
   Vue --> Map[MapLibre / map provider]
 ```
 
-The database stores messages and listing state. WebSockets deliver updates, so conversation history does not depend on a client staying connected. Backend permissions restrict private fields and partner operations.
+Messages and listings are stored in the database. WebSockets deliver updates while users are connected, and the conversation history remains available when they return. Backend permissions control access to private fields and partner operations.
 
 ## What the video shows
 
 A loaded London map, gradual creation of a lost-item report, a Tower Bridge map pin, publication, a found-item category filter, inspection of a possible match and a message to the partner organization.
 
-A shared category is a search aid, not proof that two listings describe the same item. The recording uses sample accounts and listings. It runs in the supported local SQLite/in-memory channel configuration, not the PostgreSQL/Redis deployment configuration.
+The category filter finds candidates; confirming a match still requires checking the item. The recording uses sample accounts and listings with SQLite and in-memory channels. The hosted demo uses PostgreSQL and Redis.
 
-## Engineering evidence
+## Tests and verification
 
-The October 8 recording completed the report and messaging flow without uncaught browser JavaScript errors. The October 5 verification record reports 32 Django tests and 18 frontend tests passing, zero lint warnings, successful builds and no known findings from the recorded dependency, secret and static-analysis checks. Those are dated checks, not a fresh full audit for this page.
+The October 8 recording completed the report and messaging flow without uncaught browser JavaScript errors. Local checks on October 5 passed 32 Django tests and 18 frontend tests, with zero lint warnings and successful builds. The dependency, secret and static-analysis scans from that run reported no known findings. These results are the October 5 baseline; later deployment checks are separate.
 
-## Scope
+## Live demo and limitations
 
-Bachelor's project with subsequent portfolio preparation. It has no claimed production usage or performance benchmark. The live demo runs on Render with Neon PostgreSQL, private image storage and Redis-backed messaging. It shares sample accounts and listings and may take about a minute to wake after inactivity. Do not enter personal or confidential information. Uploads and map requests are quota-limited; this is not a production lost-property service. The video remains a local recording.
+Nahodka began as my bachelor's project and was later prepared for this portfolio. It has not been validated as a production lost-property service or benchmarked under production load.
+
+The live demo runs on Render with Neon PostgreSQL, private image storage and Redis-backed messaging. Visitors share sample accounts and listings. The service may take about a minute to wake after inactivity; uploads and map requests have quotas. Do not enter personal or confidential information. The video above was recorded locally.

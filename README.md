@@ -2,7 +2,9 @@
 
 Full-stack developer building web products with TypeScript, React/Vue, Node.js, Django and PostgreSQL.
 
-My background is in Applied Mathematics and Computer Science. I am also studying AI in automated information processing and control systems at master's level. I use AI tools for research, implementation and review, and check the resulting code through tests and product workflows.
+My background is in Applied Mathematics and Computer Science. I am studying AI in automated information processing and control systems at master's level.
+
+I use AI tools during research, development and review. I check the code with automated tests and work through the application's user flows.
 
 I am based in Nizhny Novgorod, Russia, and looking for fully remote development work.
 
@@ -12,7 +14,7 @@ I am based in Nizhny Novgorod, Russia, and looking for fully remote development 
 
 ### OptBot
 
-A B2B ordering platform for manufacturers and dealers. It covers public catalog browsing, dealer-specific prices, order creation and supplier administration. Tenant isolation combines application permissions with PostgreSQL row-level security.
+A B2B ordering platform for manufacturers and dealers. Visitors browse the public catalog; approved dealers see their contract prices and place orders. Supplier managers manage dealer accounts and payment terms. PostgreSQL row-level security and application permissions keep each tenant's data separate.
 
 TypeScript · Next.js · React · Express · PostgreSQL · Redis
 
@@ -28,12 +30,12 @@ Vue · Django REST Framework · Channels · PostgreSQL · MapLibre
 
 ### CiteDraft
 
-A support-reply drafting prototype. It uses Gemini to select relevant policy facts, builds a draft from reviewed statements, and lets an operator edit, check sources and approve the exact text internally.
+A support-reply drafting prototype. Gemini selects policy facts and approved statement IDs. The server builds the draft, then an operator edits it and checks the sources before internal approval. CiteDraft does not send replies to customers.
 
 TypeScript · Next.js · Gemini · Structured outputs · Evaluation datasets
 
 [Case study](cases/citedraft.md) · [Watch demo, 74 seconds](https://ilyam-dev-source.github.io/ilyam-dev-source/#citedraft)
 
-OptBot and CiteDraft are self-directed projects. Nahodka began as my bachelor's project and was later prepared for this portfolio. The recordings use sample data; the case studies describe the demo boundaries and engineering decisions.
+OptBot and CiteDraft are self-directed projects. Nahodka began as my bachelor's project and was later prepared for this portfolio. The case studies describe the architecture, test results and demo setup.
 
-The two live demos share sample data and may take about a minute to wake after inactivity. Do not enter personal or confidential information. CiteDraft remains a local model demonstration; there is no public model endpoint.
+The videos are local recordings with sample data. OptBot and Nahodka also have live demos with shared sample accounts and data; they may take about a minute to wake after inactivity. Do not enter personal or confidential information. CiteDraft has no public model endpoint.
