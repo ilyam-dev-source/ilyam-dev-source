@@ -4,7 +4,7 @@ A lost-and-found service for individuals and partner organizations. Listings com
 
 ![Map-based home page](../media/nahodka-home.png)
 
-[Watch the local demo, 89 seconds](https://ilyam-dev-source.github.io/ilyam-dev-source/#nahodka) · [Download MP4](../media/nahodka-demo.mp4) · [Back to profile](../README.md)
+[Live demo](https://nahodka-portfolio.onrender.com/) · [Watch the local recording, 89 seconds](https://ilyam-dev-source.github.io/ilyam-dev-source/#nahodka) · [Download MP4](../media/nahodka-demo.mp4) · [Back to profile](../README.md)
 
 ## What I built
 
@@ -39,4 +39,4 @@ The October 8 recording completed the report and messaging flow without uncaught
 
 ## Scope
 
-Bachelor's project with subsequent portfolio preparation. It has no claimed production usage or performance benchmark. The public portfolio page hosts the recording, not the application. Production operation would require separate validation of storage, email, map quotas, abuse controls and the deployed WebSocket setup.
+Bachelor's project with subsequent portfolio preparation. It has no claimed production usage or performance benchmark. The live demo runs on Render with Neon PostgreSQL, private image storage and Redis-backed messaging. It shares sample accounts and listings and may take about a minute to wake after inactivity. Do not enter personal or confidential information. Uploads and map requests are quota-limited; this is not a production lost-property service. The video remains a local recording.
