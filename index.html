@@ -22,8 +22,8 @@
         <h1 id="intro-title">Web products,<br>from interface to data.</h1>
         <p class="intro-copy">I build full-stack applications with TypeScript, React/Vue, Node.js, Django and PostgreSQL. These three projects show ordering, map-based discovery and AI-assisted support drafting.</p>
       </div>
-      <aside class="intro-aside" aria-label="Location and recording context">
-        <p>Nizhny Novgorod, Russia<br>Looking for fully remote development work.</p>
+      <aside class="intro-aside" aria-label="Availability and recording context">
+        <p>Remote · UTC+3 · Flexible / CET overlap<br>Looking for fully remote development work.</p>
         <p class="recording-note">These are local recordings with sample data, not live app demos. English captions are included in the videos. Use the native controls to seek or watch fullscreen.</p>
         <p class="recording-note">OptBot and Nahodka also have live demos below. They share sample data and may take about a minute to wake after inactivity. Do not enter personal or confidential information.</p>
       </aside>
@@ -31,47 +31,44 @@
 
     <nav class="project-nav" aria-label="Jump to a project">
       <span class="nav-label">Explore the projects</span>
-      <a href="#optbot"><span aria-hidden="true">01</span> OptBot</a>
+      <a href="#citedraft"><span aria-hidden="true">01</span> CiteDraft</a>
       <a href="#nahodka"><span aria-hidden="true">02</span> Nahodka</a>
-      <a href="#citedraft"><span aria-hidden="true">03</span> CiteDraft</a>
+      <a href="#optbot"><span aria-hidden="true">03</span> OptBot</a>
     </nav>
 
-    <section class="project" id="optbot" aria-labelledby="optbot-title">
+    <section class="project" id="citedraft" aria-labelledby="citedraft-title">
       <div class="project-heading">
         <div>
           <p class="eyebrow">01 / Self-directed project</p>
-          <h2 id="optbot-title">OptBot</h2>
-          <p class="project-category">B2B ordering</p>
+          <h2 id="citedraft-title">CiteDraft</h2>
+          <p class="project-category">Support-reply drafting</p>
         </div>
         <div class="project-summary">
-          <p>A manufacturer's dealer network, in one ordering workflow: public catalog, negotiated dealer prices, cart review and supplier administration.</p>
-          <p class="stack">TypeScript · Next.js · React · Express · PostgreSQL · Redis</p>
+          <p>A review workspace for the customer's question, policy sources and proposed reply. Gemini selects relevant facts; an operator edits, checks sources and approves the exact text internally.</p>
+          <p class="stack">TypeScript · Next.js · Gemini · Structured outputs · Evaluation datasets</p>
         </div>
       </div>
       <figure class="recording">
-        <video id="video-optbot" controls playsinline preload="none" poster="media/optbot-catalog.png" aria-label="OptBot local demonstration of catalog, dealer pricing and order creation" aria-describedby="optbot-caption">
-          <source src="media/optbot-demo.mp4" type="video/mp4">
+        <video id="video-citedraft" controls playsinline preload="none" poster="media/citedraft-review.png" aria-label="CiteDraft local demonstration of a support draft, source checks and internal approval" aria-describedby="citedraft-caption">
+          <source src="media/citedraft-demo.mp4" type="video/mp4">
           Your browser does not support embedded video. Use the MP4 download below.
         </video>
-        <figcaption id="optbot-caption">
-          <span>Local recording · 1 min 16 sec · English captions</span>
-          <a href="media/optbot-demo.mp4" download="optbot-demo.mp4">Download OptBot MP4</a>
+        <figcaption id="citedraft-caption">
+          <span>Local recording · 1 min 14 sec · English captions</span>
+          <a href="media/citedraft-demo.mp4" download="citedraft-demo.mp4">Download CiteDraft MP4</a>
         </figcaption>
       </figure>
       <div class="project-details">
         <div>
           <h3>Engineering focus</h3>
-          <p>Application permissions and PostgreSQL row-level security enforce tenant isolation. Server-side quote verification and transactions support the order workflow.</p>
+          <p>Server-validated structured outputs select reviewed statement IDs. Edited text requires another human source check; an audit hash records the exact internally approved draft.</p>
         </div>
         <div>
           <h3>Recording boundary</h3>
-          <p>Catalog, sessions and order transitions run locally. External company lookup, email, KMS and ERP adapters are simulated; the confirmation is not a live ERP connection.</p>
+          <p>A real Gemini Flash-Lite response runs in the local application's Cloud Semantic mode. The video shows internal approval, not customer-message delivery. This selected example is not an accuracy benchmark.</p>
         </div>
       </div>
-      <div class="project-actions">
-        <a class="case-link" href="https://optbot-portfolio.vercel.app/">Open OptBot live demo <span aria-hidden="true">↗</span></a>
-        <a class="case-link" href="https://github.com/ilyam-dev-source/ilyam-dev-source/blob/main/cases/optbot.md">Read the OptBot case study <span aria-hidden="true">↗</span></a>
-      </div>
+      <a class="case-link" href="https://github.com/ilyam-dev-source/ilyam-dev-source/blob/main/cases/citedraft.md">Read the CiteDraft case study <span aria-hidden="true">↗</span></a>
     </section>
 
     <section class="project" id="nahodka" aria-labelledby="nahodka-title">
@@ -112,39 +109,42 @@
       </div>
     </section>
 
-    <section class="project" id="citedraft" aria-labelledby="citedraft-title">
+    <section class="project" id="optbot" aria-labelledby="optbot-title">
       <div class="project-heading">
         <div>
           <p class="eyebrow">03 / Self-directed project</p>
-          <h2 id="citedraft-title">CiteDraft</h2>
-          <p class="project-category">Support-reply drafting</p>
+          <h2 id="optbot-title">OptBot</h2>
+          <p class="project-category">B2B ordering</p>
         </div>
         <div class="project-summary">
-          <p>A review workspace for the customer's question, policy sources and proposed reply. Gemini selects relevant facts; an operator edits, checks sources and approves the exact text internally.</p>
-          <p class="stack">TypeScript · Next.js · Gemini · Structured outputs · Evaluation datasets</p>
+          <p>A manufacturer's dealer network, in one ordering workflow: public catalog, negotiated dealer prices, cart review and supplier administration.</p>
+          <p class="stack">TypeScript · Next.js · React · Express · PostgreSQL · Redis</p>
         </div>
       </div>
       <figure class="recording">
-        <video id="video-citedraft" controls playsinline preload="none" poster="media/citedraft-review.png" aria-label="CiteDraft local demonstration of a support draft, source checks and internal approval" aria-describedby="citedraft-caption">
-          <source src="media/citedraft-demo.mp4" type="video/mp4">
+        <video id="video-optbot" controls playsinline preload="none" poster="media/optbot-catalog.png" aria-label="OptBot local demonstration of catalog, dealer pricing and order creation" aria-describedby="optbot-caption">
+          <source src="media/optbot-demo.mp4" type="video/mp4">
           Your browser does not support embedded video. Use the MP4 download below.
         </video>
-        <figcaption id="citedraft-caption">
-          <span>Local recording · 1 min 14 sec · English captions</span>
-          <a href="media/citedraft-demo.mp4" download="citedraft-demo.mp4">Download CiteDraft MP4</a>
+        <figcaption id="optbot-caption">
+          <span>Local recording · 1 min 16 sec · English captions</span>
+          <a href="media/optbot-demo.mp4" download="optbot-demo.mp4">Download OptBot MP4</a>
         </figcaption>
       </figure>
       <div class="project-details">
         <div>
           <h3>Engineering focus</h3>
-          <p>Server-validated structured outputs select reviewed statement IDs. Edited text requires another human source check; an audit hash records the exact internally approved draft.</p>
+          <p>Application permissions and PostgreSQL row-level security enforce tenant isolation. Server-side quote verification and transactions support the order workflow.</p>
         </div>
         <div>
           <h3>Recording boundary</h3>
-          <p>A real Gemini Flash-Lite response runs in the local application's Cloud Semantic mode. The video shows internal approval, not customer-message delivery. This selected example is not an accuracy benchmark.</p>
+          <p>Catalog, sessions and order transitions run locally. External company lookup, email, KMS and ERP adapters are simulated; the confirmation is not a live ERP connection.</p>
         </div>
       </div>
-      <a class="case-link" href="https://github.com/ilyam-dev-source/ilyam-dev-source/blob/main/cases/citedraft.md">Read the CiteDraft case study <span aria-hidden="true">↗</span></a>
+      <div class="project-actions">
+        <a class="case-link" href="https://optbot-portfolio.vercel.app/">Open OptBot live demo <span aria-hidden="true">↗</span></a>
+        <a class="case-link" href="https://github.com/ilyam-dev-source/ilyam-dev-source/blob/main/cases/optbot.md">Read the OptBot case study <span aria-hidden="true">↗</span></a>
+      </div>
     </section>
 
     <section class="background" aria-labelledby="background-title">
